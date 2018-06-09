@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6">
 
-                <a href="/view/main-page.jsp">
+                <a href="/start">
                     <img class="" style="max-width: 200px; margin: 15px auto; display: block; vertical-align: bottom;"
                          src="${pageContext.request.contextPath}/static/img/KWs6o9.png"
                          alt="logo"/>

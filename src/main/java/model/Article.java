@@ -1,15 +1,13 @@
 package model;
 
-import java.time.LocalDateTime;
-
 public class Article {
     private String title;
-    private LocalDateTime date;
+    private String date;
     private String category;
     private String tekst;
     private String imageURL;
 
-    public Article(String title, LocalDateTime date, String kategoria, String tekst, String imageURL) {
+    public Article(String title, String date, String kategoria, String tekst, String imageURL) {
         this.title = title;
         this.date = date;
         this.category = kategoria;
@@ -25,11 +23,11 @@ public class Article {
         this.title = title;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

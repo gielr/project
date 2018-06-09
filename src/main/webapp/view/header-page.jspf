@@ -1,0 +1,11 @@
+<header style="background-color: white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="" style="max-width: 1200px; margin: 15px auto; display: block; vertical-align: center;"
+                         src="${pageContext.request.contextPath}/static/img/Wiadomosci.png"
+                         alt="logo"/>
+            </div>
+        </div>
+    </div>
+</header>
