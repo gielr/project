@@ -27,14 +27,8 @@
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <img class="" style="max-width:1200px; margin:0px auto; display: block; vertical-align: center;"
-                 src="${pageContext.request.contextPath}${articles[someValue-1].imageURL}" alt="panda"><br>
-            <h3><c:out value="Tytuł artykułu: ${articles[someValue-1].title}"/></h3>
-            <p><c:out value="Data dodania:${articles[someValue-1].date}"/></p>
-            <h6><c:out value="${articles[someValue-1].category}"/></h6>
-            <p><c:out value="${articles[someValue-1].tekst}"/></p>
-        </div>
-        <div class="col-md-4"></div>
+            <p style="color: red; display: block; vertical-align: center;"><c:out value="Brak podanego numeru artykułu!"/></p>
+        </div><div class="col-md-4"></div>
     </div>
 </div>
 <%@ include file="/view/footer-page.jspf" %>

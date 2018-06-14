@@ -2,20 +2,37 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-
                 <a href="/start">
                     <img class="" style="max-width: 200px; margin: 15px auto; display: block; vertical-align: bottom;"
                          src="${pageContext.request.contextPath}/static/img/KWs6o9.png"
                          alt="logo"/>
                 </a>
-
             </div>
             <div class="col-md-6">
-                Kontakt<br>
-                Polityka  Prywatnosci<br>
-                Zasady  uzycia<br>
-            </div>
+                <a href="/kontakt">Kontakt</a><br>
+                Polityka Prywatnosci<br>
+                Zasady uzycia<br>
+                <a href="/admin/panel">Panel administratora</a><br><br>
 
+                <%
+                    String status = (String) session.getAttribute("isAdmin");
+                    if (status == null) {
+                        status = new String("False");
+                    } else {
+                        status = new String(status.toString());
+                    }
+                    session.setAttribute("status", status);
+                %>
+
+                <c:choose>
+                    <c:when test="${status == 'True'}">
+                        Zalogowany jako: <strong>Admin</strong>
+                    </c:when>
+                    <c:otherwise>
+                        Zalogowany jako: <strong>nie jestes zalogowany!</strong>
+                    </c:otherwise>
+                </c:choose>
+            </div>
         </div>
     </div>
 </header>

@@ -19,24 +19,31 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <head>
-    <title>Article page</title>
+    <title>Kontakt</title>
 </head>
 <body>
-<%@ include file="/view/header-page.jspf" %>
+<%@ include file="header-page.jspf" %>
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <img class="" style="max-width:1200px; margin:0px auto; display: block; vertical-align: center;"
-                 src="${pageContext.request.contextPath}${articles[someValue-1].imageURL}" alt="panda"><br>
-            <h3><c:out value="Tytuł artykułu: ${articles[someValue-1].title}"/></h3>
-            <p><c:out value="Data dodania:${articles[someValue-1].date}"/></p>
-            <h6><c:out value="${articles[someValue-1].category}"/></h6>
-            <p><c:out value="${articles[someValue-1].tekst}"/></p>
+            <legend><h2>Kontakt:</h2></legend>
+            <p><strong>Formularz</strong></p>
+            <form action="/mail" method="POST">
+                <fieldset>
+                    <p>Podaj swoj nick:<br>
+                        <input type="text" name="nick"></p>
+                    <p>Podaj temat wiadomosci:<br>
+                        <input type="text" name="topic"></p>
+                    <p>Tu wpisz tekst wiadomosci:<br>
+                        <textarea rows="4" cols="50" name="text"></textarea></p>
+                </fieldset>
+                <input type="submit" value="Wyslij wiadomosc">
+            </form>
         </div>
         <div class="col-md-4"></div>
     </div>
 </div>
-<%@ include file="/view/footer-page.jspf" %>
+<%@ include file="footer-page.jspf" %>
 </body>
 </html>

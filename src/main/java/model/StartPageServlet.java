@@ -1,5 +1,8 @@
 package model;
 
+import utilities.Article;
+import utilities.ArticleDataBaseMock;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "Main Page", value = {"/start"})
-public class startPage extends HttpServlet{
+public class StartPageServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Article[] articles = ArticleDataBaseMock.getArticles();
 
